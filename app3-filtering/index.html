@@ -1,7 +1,17 @@
-<html>
-	<body>
-		Something
-				<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+<html ng-app = "myApp">
+	<body ng-controller="mainController">
+    
+    Find a person: <input ng-model="filterPredicate" />
+    
+    <div ng-repeat="person in people | filter: filterPredicate">
+    <h3>{{person.name}}</h3>
+    <p>Email: {{person.email}}</p>
+    <p>Date Employed: {{person.dateEmployed}}</p>
+    <p>Phone Number: {{person.phone}}</p>
+    </div>
+    
+    
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
 		<script src="service.js"></script>

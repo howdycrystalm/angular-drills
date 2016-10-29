@@ -1,9 +1,13 @@
-<html>
-	<body>
-	
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
-		<script src="app.js"></script>
-		<script src="controller.js"></script>
-		<script src="service.js"></script>
-	</body>
+<html ng-app="app">
+  <body ng-controller="mainController">
+      <h1>{{textToChange}}</h1>
+      <br>
+      <input ng-model="freshText"/>
+      <button ng-click="userInput(freshText)">submit</button>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+    <script src="service.js"></script>
+  </body>
 </html>
